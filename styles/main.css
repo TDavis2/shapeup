@@ -1,8 +1,19 @@
+/* Universal Selector */ 
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+html {
+    background-image: url("../images/paper.gif");
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -12,6 +23,7 @@ body {
     margin: 0 auto;
     border: 5px solid steelblue;
     box-shadow: 5px 5px 8p gray;
+    background-color: white;
 }
 
 h1 {
@@ -44,6 +56,63 @@ header img {
     float: left;
     margin-left: 10px;
     margin-right: 20px;
+}
+
+/* Horizontal Menu Bar */
+#nav_menu ul {
+    list-style: none;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 8px 0;
+    background-color: #afeeee;
+}
+
+#nav_menu ul li {
+    display: inline;
+    padding: 5px 20px;
+    border-right: 3px solid black;
+}
+
+#nav_menu #last {
+    border-right: none;
+}
+
+
+#nav_menu ul li a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#nav_menu ul li a:hover {
+    color: red;
+
+}
+
+/* Vertical Navigation List */
+#nav_list ul {
+    list-style: none;
+
+}
+
+#nav_list ul li {
+    border: 2px solid black;
+    width: 90%;
+}
+
+#nav_list ul li a{
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: lightsteelblue;
+    padding: .5em;
+    color: black;
+
+}
+
+#nav_list ul li a:hover, #nav_list ul li a:focus {
+    background-color: steelblue;
+    color: white;
 }
 
 main {
