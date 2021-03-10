@@ -28,7 +28,8 @@ body {
 
 h1 {
     font-size: 250%;
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-left: 1em;
 }
 
 header {
@@ -41,24 +42,54 @@ header h2 {
     font-style: italic;
     color: steelblue;
     text-shadow: 2px 2px 15px #888888;
-    margin-top: 30px;
-
+    margin-top: 15px;
 }
 
 header h3 {
     font-size: 150%;
     margin-top: 10px;
     margin-bottom: 15px;
-
 }
 
 header img {
     float: left;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin-left: 0.5em;
+    margin-right: 1.5em;
 }
 
-/* Horizontal Menu Bar */
+/* Horizontal Menu Bar - W3 Float and Block style */
+
+#nav_menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: steelblue;
+}
+
+#nav_menu ul li {
+    float: left;
+}
+
+#nav_menu #about {
+    float: right;
+}
+
+#nav_menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 1.5em;
+    text-decoration: none;
+}
+
+#nav_menu ul li a:hover {
+    background-color: lightsteelblue;
+    color: black;
+}
+
+/* Horizontal Menu Bar - InLine NavBar Style
+
 #nav_menu ul {
     list-style: none;
     text-align: center;
@@ -89,10 +120,11 @@ header img {
 
 }
 
+*/
+
 /* Vertical Navigation List */
 #nav_list ul {
     list-style: none;
-
 }
 
 #nav_list ul li {
@@ -107,7 +139,6 @@ header img {
     background-color: lightsteelblue;
     padding: .5em;
     color: black;
-
 }
 
 #nav_list ul li a:hover, #nav_list ul li a:focus {
@@ -115,31 +146,33 @@ header img {
     color: white;
 }
 
-main {
-    clear: both;
-}
-
 section h2, section h3, aside h2 {
     font-size: 150%;
-    margin-top: 15px;
+    margin-left: 0.5em;
 }
 
-p {
-    margin-top: 15px;
-    margin-bottom: 15px;
+section h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
+aside ul {
+    margin-left: 2em;
+}
 
+section p {
+    margin: 1em;
+}
 
 section blockquote {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 3em;
+    margin-right: 3em;
     font-size: 90%;
     color: navy;
     border-left: 3px solid maroon;
     padding: 5px;
     background-color: khaki;
-    margin-top: 10px;
+    /* margin-top: 10px; */ 
 }
 
 /* Link colors for section */
@@ -192,9 +225,12 @@ aside a {
 
 .sidebar{
     width: 33%;
-    padding-left: 30px;
-    padding-top: 30px;
-    
+    padding-top: 20px;
+}
+
+.sidebar li {
+    margin-top: 5px;
+    margin-left: .5em;
 }
 
 .sidebar h2 {
@@ -208,7 +244,7 @@ li {
 
 footer {
     background-color: steelblue;
-    margin-top: 20px;
+    margin-top: 10px;
     clear: both;
 }
 
@@ -216,10 +252,30 @@ footer p {
     font-size: 75%;
     text-align: center;
     color: white;
-    padding: 25px;
+    padding: 2em;
     font-weight: bold;
     font-variant: small-caps;
 }
 
+/* Media Query */
+
+@media only screen and (max-width: 600px) {
+    .homesection {
+        float: none;
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+
+
+
+    
+}
 
 
